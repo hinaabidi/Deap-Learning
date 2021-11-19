@@ -84,13 +84,14 @@ The report should contain the following:
 2. **Results**: Using bulleted lists and images to support your answers, address the following questions.
 
   * Data Preprocessing
-    * What variable(s) are considered the target(s) for your model?
-    * What variable(s) are considered to be the features for your model?
+    * What variable(s) are considered the target(s) for your model? The "IS_SUCCESSFUL" column is used as target
+    * What variable(s) are considered to be the features for your model?APPLICATION_TYPE', 'AFFILIATION', 'CLASSIFICATION', 'USE_CASE', 'STATUS', 'INCOME_AMT', 'SPECIAL_CONSIDERATIONS', 'ASK_AMT', 'IS_SUCCESSFUL'
     * What variable(s) are neither targets nor features, and should be removed from the input data?
+    'EIN', 'NAME' and 'ORGANIZATION' were dropped as they have no bearing on results.
   * Compiling, Training, and Evaluating the Model
-    * How many neurons, layers, and activation functions did you select for your neural network model, and why?
-    * Were you able to achieve the target model performance?
-    * What steps did you take to try and increase model performance?
+    * How many neurons, layers, and activation functions did you select for your neural network model, and why?Attempt #2 has the best accuracy and it used 80 neurons for layer 1 and 30 neurons for layer 2 and the hidden layers used 'relu' for activation and output layer actication of sigmoid. 
+    * Were you able to achieve the target model performance?No
+    * What steps did you take to try and increase model performance?I tried dropping one more column named "ORGANIZATION" and I tried reducing the cutoff vallue for 'APPLICATION' and 'CLASSIFICATION' columns to increase the data for training.
 
 3. **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
 
